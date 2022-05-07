@@ -47,5 +47,10 @@ public double ingresos() {
         return String.format("%s: %s\n%s: $%,.2f; %s: %.2f","empleado por comision",super.toString(),"Ventas brutas", obtenerVentasBrutas(), "tarifa de comision", obtenerTarifaComision());
     }
 
+    @Override
+    public double obtenerMontoPago() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
    
 }
