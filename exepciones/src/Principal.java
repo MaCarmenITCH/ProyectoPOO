@@ -6,8 +6,9 @@ import java.util.Scanner;
 public class Principal {
 
     public static void main(String[] args) {
-        combinandoExcepciones();
+        //combinandoExcepciones();
         //  primeraExcepcion();
+        atrapandoExcepciones();
     }
 
     //Se crea el metodo para llamar o generar mi primera excepcion
@@ -75,6 +76,23 @@ public class Principal {
             System.out.println("Convertir: " + convertir("palabra"));
         } catch (NumberFormatException e) {
             System.err.println("No se puede realizar la conversión");
+        }
+    }
+    /*Se crea metodo para hacer uso de la Java class MiExcepcion */
+    public static void validadPropia(){
+        int n = 5;
+        try{
+            //Se llama al metodo que lanza la excepcion
+            minimo(n);
+            System.out.println(n + "es mayor a 10");
+        } catch (MiExcepcion e){
+            System.out.println("Numero no util");
+        }
+    }
+    //Se crea metodo que lanza la excepcion propia
+    public static void minimo(int numero) throws MiExcepcion{
+        if(numero <= 10){
+            throw new MiExcepcion("Se requiere un numero mayor a 10");
         }
     }
 }
