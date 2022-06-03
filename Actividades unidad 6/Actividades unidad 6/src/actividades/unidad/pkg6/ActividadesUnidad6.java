@@ -13,36 +13,37 @@
  mkdir().- crea una carpeta. */
 package actividades.unidad.pkg6;
 
-import java.io.File;
+import java.io.File;  
 
 public class ActividadesUnidad6 {
 
     public static void main(String[] args) {
 
-        //file file =new file ("C:\Users\invitado\Desktop\Datos")
-        // file file =new file ("C:\Users\invitado\Downloads\Actividades unidad 6 - copia)"
         File file = new File("C:\\Users\\invitado\\Desktop\\Datos.txt");
-
-        //File file = new File("C:\\Users\\invitado\\Downloads\\Actividades unidad 6 - copia");
-        System.out.println(file.exists());
+        File file1 = new File("C:\\Users\\invitado\\Downloads\\Actividades unidad 6");
+        
+        System.out.println("Existencias: "+file.exists() + "" + file1.exists());
         // para saber si es directorio(devuelve false o true)
         System.out.println("Indica si el archivo es un directorio " + file.isDirectory());
         //Para saber la fecha de modificacion
-        System.out.println(file.lastModified());
+        System.out.println("Indica la fecha de modificación " +file.lastModified()+ "" + file1.lastModified());
         //para saber el nombre del archivo
-        System.out.println(file.getName());
+        System.out.println("Indica el nombre " +file.getName()+ "" + file1.getName());
         //para saber la ruta
-        System.out.println(file.getPath());
+        System.out.println("Indica a ruta " +file.getPath()+ "" + file1.getPath());
         // para saber el tamaño en bites que ocupa en el archivo
-        System.out.println(file.length());
+        System.out.println("Indica el tamaño " +file.length()+ "" + file1.length());
         // para saber si el archivo es de lectura (f/v)
-        System.out.println(file.canRead());
+        System.out.println("Indica si si se puede leer " +file.canRead()+ "" + file1.canRead());
         //para eliminar un archivo
         // System.out.println(file.delete());
         //si fuera un directorio y queremos saber los archivos que tiene 
-        /* for(String string:file.list()){
+         for(String string:file.list()){
          System.out.println(string);
-         }*/
+         } 
+         for(String string:file1.list()){
+         System.out.println(string);
+         }
     }
     
 }
